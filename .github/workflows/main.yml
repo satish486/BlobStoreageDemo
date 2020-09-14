@@ -29,6 +29,6 @@ jobs:
           connection_string: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
           container_name: privateimages
           source_folder: privateimages\
-          clean_destination_folder: true
+          
 
     
