@@ -23,10 +23,10 @@ jobs:
       - uses: actions/checkout@v2
 
      # to copy blob files from source to destination
-      - uses: storageaccount486/Action-AzureBlobUpload@v1.7
+      - uses: LanceMcCarthy/Action-AzureBlobUpload@v1.7
         name: Uploading to Azure storage...
         with:
-          connection_string: ${{ secrets.AZURE_CREDENTIALS }}
+          connection_string: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
           container_name: privateimages
           source_folder: src\privateimages\
 
