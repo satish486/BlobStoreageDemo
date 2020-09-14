@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
 
      # to copy blob files from source to destination
-      - uses: LanceMcCarthy/Action-AzureBlobUpload@v1.7
+      - uses: LanceMcCarthy/Action-AzureBlobUpload@v1.3
         name: Uploading to Azure storage...
         with:
           connection_string: ${{ secrets.AZURE_CREDENTIALS }}
