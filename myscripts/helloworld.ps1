@@ -30,7 +30,9 @@ $files = Get-ChildItem -Path $appdirectory -Recurse | Where-Object{!($_.PSIsCont
 echo "testing change"
 foreach ($file in $files)
 {
+echo "inside the for loop"
     $relativepath = (Resolve-Path -Path $file.FullName -Relative).Replace(".\", "").Replace('\', '/')
+	echo $relativepath
     $uri = New-Object System.Uri("$url/$relativepath")
     "Uploading to " + $uri.AbsoluteUri
     $webclient.UploadFile($uri, $file.FullName)
