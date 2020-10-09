@@ -1,4 +1,3 @@
-try{
 echo "helloworld"
 $appdirectory="./testfiles"
 $webappname="testingwebapp1010"
@@ -37,13 +36,4 @@ foreach ($file in $files)
     $webclient.UploadFile($uri, $file.FullName)
 } 
 $webclient.Dispose()
-}catch (err) {
-   const core = require('@actions/core')
 
-function catchError (error) {
-  const passErrorAsAStringBecauseItsRequired = error.toString()
-  core.setFailed(passErrorAsAStringBecauseItsRequired)
-}
-
-module.exports = catchError
-}
