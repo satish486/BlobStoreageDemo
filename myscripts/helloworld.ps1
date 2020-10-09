@@ -38,5 +38,12 @@ foreach ($file in $files)
 } 
 $webclient.Dispose()
 }catch (err) {
-   core.setFailed(err.toString());
+   const core = require('@actions/core')
+
+function catchError (error) {
+  const passErrorAsAStringBecauseItsRequired = error.toString()
+  core.setFailed(passErrorAsAStringBecauseItsRequired)
+}
+
+module.exports = catchError
 }
