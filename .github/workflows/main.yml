@@ -17,5 +17,5 @@ jobs:
     - name: Build
       shell: pwsh
       run: |
-        .\myscripts\install.ps1
+        .\myscripts\helloworld.ps1
     
