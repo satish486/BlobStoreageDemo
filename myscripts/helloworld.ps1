@@ -15,9 +15,7 @@ $location="Central US"
 #-ResourceGroupName myResourceGroup
 
 # Get publishing profile for the web app
-$xml = [xml](Get-AzWebAppPublishingProfile -Name $webappname 
--ResourceGroupName Development 
--OutputFile null)
+$xml = [xml](Get-AzWebAppPublishingProfile -Name $webappname -ResourceGroupName Development -OutputFile null)
 
 # Extract connection information from publishing profile
 $username = $xml.SelectNodes("//publishProfile[@publishMethod=`"FTP`"]/@userName").value
