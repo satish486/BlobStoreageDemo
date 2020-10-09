@@ -22,7 +22,7 @@ jobs:
         azPSVersion: '3.1.0'
 
     - uses: actions/checkout@v1
-    - uses: azure/powershell@v1
+    - uses: azure/powershell@v2
     - name: Build
       shell: pwsh
       run: |

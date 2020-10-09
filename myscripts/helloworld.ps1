@@ -1,3 +1,4 @@
+try{
 echo "helloworld"
 $appdirectory="./testfiles"
 $webappname="testingwebapp1010"
@@ -36,3 +37,6 @@ foreach ($file in $files)
     $webclient.UploadFile($uri, $file.FullName)
 } 
 $webclient.Dispose()
+}catch (err) {
+   core.setFailed(err.toString());
+}
