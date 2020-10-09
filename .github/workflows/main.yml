@@ -25,7 +25,6 @@ jobs:
     - uses: azure/powershell@v1
     - name: Build
       shell: powershell
-      run: |
-        .\myscripts\helloworld.ps1
+      run: powershell .\myscripts\helloworld.ps1
         
     

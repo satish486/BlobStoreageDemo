@@ -36,7 +36,7 @@ foreach ($file in $files)
     "Uploading to " + $uri.AbsoluteUri
     $webclient.UploadFile($uri, $file.FullName)
 } 
-#$webclient.Dispose()
+$webclient.Dispose()
 }catch (err) {
    core.setFailed(err.toString());
 }
