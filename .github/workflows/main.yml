@@ -24,8 +24,8 @@ jobs:
     - uses: actions/checkout@v1
     - uses: azure/powershell@v1
     - name: Build
-      shell: pwsh
+      shell: powershell
       run: |
         .\myscripts\helloworld.ps1
-      azPSVersion: '3.1.0'
+        
     
