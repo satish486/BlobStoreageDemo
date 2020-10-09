@@ -21,8 +21,10 @@ jobs:
           
         azPSVersion: '3.1.0'
         
-    - name: Run Azure PowerShell script 2
+    - name: Check out the code
       uses: actions/checkout@v1
+      
+    - name: Run Azure PowerShell script 2
       uses: azure/powershell@v1
       with:
         inlineScript: |
