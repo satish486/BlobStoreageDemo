@@ -1,4 +1,5 @@
 echo "helloworld"
+set-executionpolicy remotesigned
 $appdirectory="./testfiles"
 $webappname="testingwebapp1010"
 $location="Central US"
