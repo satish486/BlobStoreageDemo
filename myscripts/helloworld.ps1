@@ -29,10 +29,10 @@ $webclient.Credentials = New-Object System.Net.NetworkCredential($username,$pass
 $files = Get-ChildItem -Path $appdirectory -Recurse | Where-Object{!($_.PSIsContainer)}
 echo "files are"+$files
 echo "testing change"
-foreach ($file in $files)
-{
+#foreach ($file in $files)
+#{
 echo "inside the for loop"
-    $relativepath = (Resolve-Path -Path $file.FullName -Relative).Replace(".\", "").Replace('\', '/')
+    $relativepath = "testfiles/test.html"
 	echo $relativepath
     $uri = New-Object System.Uri("$url/$relativepath")
     "Uploading to " + $uri.AbsoluteUri
