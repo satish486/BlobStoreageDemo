@@ -27,6 +27,7 @@ Set-Location $appdirectory
 $webclient = New-Object -TypeName System.Net.WebClient
 $webclient.Credentials = New-Object System.Net.NetworkCredential($username,$password)
 $files = Get-ChildItem -Path $appdirectory -Recurse | Where-Object{!($_.PSIsContainer)}
+echo "files are"+$files
 echo "testing change"
 foreach ($file in $files)
 {
