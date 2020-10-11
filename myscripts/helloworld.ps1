@@ -1,6 +1,6 @@
 echo "helloworld"
 $appdirectory="./testfiles"
-$webappname="testingwebapp1010"
+$webappname="testingwebapp10"
 $location="Central US"
 
 # Create a resource group.
