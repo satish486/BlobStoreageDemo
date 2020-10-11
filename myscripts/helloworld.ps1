@@ -1,5 +1,5 @@
 echo "helloworld"
-$appdirectory=".\testfiles\"
+$appdirectory=".\testfiles"
 $webappname="testingwebapp10"
 $location="Central US"
 
