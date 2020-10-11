@@ -1,5 +1,5 @@
 echo "helloworld"
-$appdirectory="./testfiles"
+$appdirectory="./testfiles/"
 $webappname="testingwebapp10"
 $location="Central US"
 
@@ -28,14 +28,14 @@ $webclient = New-Object -TypeName System.Net.WebClient
 $webclient.Credentials = New-Object System.Net.NetworkCredential($username,$password)
 $files = Get-ChildItem -Path $appdirectory -Recurse | Where-Object{!($_.PSIsContainer)}
 echo "testing change"
-#foreach ($file in $files)
-#{
+foreach ($file in $files)
+{
 echo "inside the for loop"
     $relativepath = (Resolve-Path -Path $file.FullName -Relative).Replace(".\", "").Replace('\', '/')
 	echo $relativepath
     $uri = New-Object System.Uri("$url/$relativepath")
     "Uploading to " + $uri.AbsoluteUri
     $webclient.UploadFile($uri, $file.FullName)
-#} 
+} 
 $webclient.Dispose()
 
