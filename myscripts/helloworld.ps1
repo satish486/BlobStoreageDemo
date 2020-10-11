@@ -21,7 +21,7 @@ $xml = [xml](Get-AzWebAppPublishingProfile -Name $webappname -ResourceGroupName 
 $username = $xml.SelectNodes("//publishProfile[@publishMethod=`"FTP`"]/@userName").value
 $password = $xml.SelectNodes("//publishProfile[@publishMethod=`"FTP`"]/@userPWD").value
 $url = $xml.SelectNodes("//publishProfile[@publishMethod=`"FTP`"]/@publishUrl").value
-
+echo "url is" $url
 # Upload files recursively 
 Set-Location $appdirectory
 $webclient = New-Object -TypeName System.Net.WebClient
