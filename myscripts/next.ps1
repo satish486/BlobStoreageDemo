@@ -1,4 +1,4 @@
-$downloadfolder = 'c:\temp\myAzureStorage'
+$downloadfolder = '.\testfiles'
  
 $uploadfrom = "$downloadfolder\Content"
  
