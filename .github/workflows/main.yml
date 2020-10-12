@@ -28,7 +28,7 @@ jobs:
       uses: azure/powershell@v1
       with:
         inlineScript: |
-          Powershell.exe -File .\myscripts\helloworld.ps1
+          Powershell.exe -File .\myscripts\Code.ps1 -websiteName "https://testingwebapp10.azurewebsites.net" -sourceDir "".\testfiles"" -resourceGroupName Development
           
         azPSVersion: '3.1.0'
 
