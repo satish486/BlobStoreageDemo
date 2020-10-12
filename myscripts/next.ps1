@@ -10,11 +10,11 @@ if($file -is [System.IO.DirectoryInfo])
 {
 $kudufolder = ((($file.FullName).Replace($uploadfrom,'Content')).replace('\','/')).trimstart('/')
 $kudufolder = "$kudufolder/"
-Upload-FileToWebApp -resourceGroupName myresourcegroup -webAppName mywebapp -kuduPath $kudufolder
+Upload-FileToWebApp -resourceGroupName Development -webAppName testingwebapp10 -kuduPath $kudufolder
 }
 elseif($file -is [System.IO.FileInfo])
 {
 $kudufile = ((($file.FullName).Replace($uploadfrom,'Content')).replace('\','/')).trimstart('/')
-Upload-FileToWebApp -resourceGroupName myresourcegroup -webAppName mywebapp -localPath $file.FullName -kuduPath $kudufile
+Upload-FileToWebApp -resourceGroupName Development -webAppName testingwebapp10 -localPath $file.FullName -kuduPath $kudufile
 }
 }
