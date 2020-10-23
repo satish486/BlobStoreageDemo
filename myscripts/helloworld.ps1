@@ -36,7 +36,7 @@ echo "inside the for loop"
 	echo $relativepath
     $uri = New-Object System.Uri("$url/$relativepath")
     echo "Uploading to " + $uri.AbsoluteUri
-	
+	echo "URI value is " $uri
     $webclient.UploadFile($uri, "test.html")
 #} 
 $webclient.Dispose()
