@@ -28,7 +28,7 @@ jobs:
       uses: azure/powershell@v1
       with:
         inlineScript: |
-          Powershell.exe -File .\myscripts\next.ps1
+          Powershell.exe -File .\myscripts\helloworld.ps1
           
         azPSVersion: '3.1.0'
 
