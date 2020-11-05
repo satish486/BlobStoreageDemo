@@ -32,7 +32,7 @@ echo "files are"+$files
 #foreach ($file in $files)
 #{
 echo "inside the for loop"
-    $relativepath = "test.html"
+    $relativepath = "test2.html"
 	echo $relativepath
     $uri = New-Object System.Uri("$url/$relativepath")
     echo "Uploading to " + $uri.AbsoluteUri
