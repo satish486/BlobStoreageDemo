@@ -38,7 +38,7 @@ echo "inside the for loop"
     echo "Uploading to " + $uri.AbsoluteUri
 	echo "URI value is " $uri
 	Write-Output $uri
-    $webclient.UploadFile($uri, "testfiles/test.html")
+    $webclient.UploadFile($uri, "testfiles/test2.html")
 #} 
 $webclient.Dispose()
 
